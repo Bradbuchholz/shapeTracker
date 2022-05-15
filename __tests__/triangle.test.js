@@ -1,5 +1,5 @@
 
-import Triangle from './../src/triangle.js';
+import Triangle from './../src/js/triangle.js';
 
 describe('Triangle', () => {
 
@@ -29,4 +29,16 @@ test('should correctly determine whether three lengths make an isosceles triangl
 test('should correctly determine whether three lengths make an equilateral triangle', () => {
   const equiTriangle = new Triangle(5,5,5)
   expect(equiTriangle.checkType()).toEqual("equilateral triangle");
+});
+
+describe('Triangle', () => {
+  let reusableTriangle;
+
+  beforeEach(() => {
+    reusableTriangle = new Triangle(5, 5, 5);
+  });
+
+  test('should show how beforeEach() works', () => {
+    console.log(reusableTriangle);
+  });
 });
